@@ -1,17 +1,12 @@
-# Lumide v0.1.0
+# Lumide v0.2.0
 
-### Highlights
-- **🤖 AI & Agents**: Plugin-based completions (**Copilot, Codestral, Mercury**) and ACP support for autonomous agents (**Claude, Gemini, goose, Cline**).
-- **🐶 Built-in Git Client (C.O.R.G.I.)**: Context-first workflow with **"Split-Brain" layout**, **Interactive Diff Editor**, **Granular Staging**, **Git Graph visualization**, and **Stash integration**.
-- **🔌 Infinite Extensibility**: Install themes, language servers, and tools directly from **pub.dev**. Supports **Hot-loadable plugins**.
-- **💙 Built with Flutter**: Modern, unified desktop experience with silky-smooth rendering.
-- **Pure Light. Pure Speed.**: Initial public release with GPU-accelerated rendering.
-- **Rope-based Editor Engine**: O(log n) text operations with virtualized rendering for files of any size.
-- **Memory Efficient**: ~80 MB idle RAM usage.
-- **LSP Support**: Completions, diagnostics, and go-to-definition.
-- **Native Git Insights**: Inline **Git Blame (Ghost Text)**, file status colors, and **Gutter/Scrollbar diff markers**.
-- **Flexible Pane System**: Workspace layout management.
-- **Customizable Keymaps**: Presets for JetBrains, VS Code, and Sublime.
+## 🦊 Core upgrade
+- Bump `lumide_api: 1.2.0` for **Debugging** support.
+
+## 💄 UI/UX enhancements
+- Add **syntax highlighting** to code block & inline code in Markdown Preview.
+- Support temporarily **switching between light/dark theme** in Markdown Preview.
+- Add **Confirmation** dialog when **drag-and-drop files/folders** within Files pane.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.
