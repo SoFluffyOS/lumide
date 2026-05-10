@@ -1,19 +1,19 @@
-# Lumide 0.5.0
-
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/a11de996-5462-4403-b792-f0c41cbe9860" />
+# Lumide 0.6.0
 
 ### Enhancements
-- Flexible Pane System now support to split pane horizontally/vertically.
-- Show a confirmation dialog before closing the IDE to prevent accidental closing.
-- Support `mdx` extension for Markdown files.
-- Enhance mouse scrolling support for Plugin Marketplace category chips.
-- Enhance readability of Input Text fields for dark themes.
-- Enhance visibility of Switch Toggle for dark themes.
+
+#### Agent Chat
+- Add session history: browse, search, and resume previous agent conversations.
+- Add "New Chat" button to status bar and history page for quick session switching.
+- Eager input: users can start typing immediately when selecting an agent — messages queue while connecting.
+- Collapsible tool call groups in agent chat — collapsed by default, showing only the most recent tool.
 
 ### Fixed
-- Fix cannot open Manage Plugins using Command Palette when a workspace is opened.
-- Fix overflow in Agent Session Summary Banner UI.
-- Fix agent used tools sometimes show loading indefinitely despite the task is completed.
+- Fix Files failed to discover project files on drive that's not C:\ on Windows.
+- Fix Project Search/Quick File Search not focus open tab correctly.
+
+#### Lumide API
+- Bump `lumide_api` to `1.3.0` to prevent memory leaks on plugins that use WebViews panel.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.
