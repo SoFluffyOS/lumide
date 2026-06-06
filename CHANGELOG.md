@@ -1,34 +1,18 @@
-# Lumide 0.9.0
+# Lumide 0.10.0
 
 ### Enhancements
-
-#### C.O.R.G.I (Git)
-- Add responsive center-pane detail tabs for compact Git (C.O.R.G.I.) and Plugins panes.
-- Improve C.O.R.G.I. commit inspector with a more compact layout and clearer modified-file summary.
-- Group nested folders in C.O.R.G.I. tree file views for shorter, easier-to-scan file lists.
-
-#### Files
-- Make File Tree toolbar always visible (no longer requires hover).
-- Add workspace name display to File Tree toolbar.
-- Add list/tree view toggles, status badges, filtering, and keyboard navigation to C.O.R.G.I. changed-file lists.
-
-#### Editor
-- Highlight selected text occurrences in the editor.
-- Improve search match highlighting in the editor.
-
-#### Flexible Pane System
-- Support customizing tab bar placement.
-- Improve Runtime Control popup:
-  - Reorder Plugins tab to show "Available" before "Waiting for Activation".
-  - Add sticky "Manage Plugins" at the footer.
+- New app icon 🦊.
+- Support dropping editor tabs into Agent Chat input to add the file as chat context.
+- Add C.O.R.G.I. support for `git pull --rebase`.
+- Open links from Markdown previews.
+- Add a minimum log level setting and default persistent logs to errors only.
+- Add searchable font pickers for UI, editor, and terminal fonts with system font support, Google font options, monospace filtering, and live previews.
+- Improve editor Back/Forward navigation history behavior.
+- Prevent menu from appear when `Alt+Tab` back into Lumide.
 
 ### Fixed
-- Fix git indicator overlapping with tree content.
-- Keep File Tree item icon and text colors unchanged when selected.
-- Improve editor Back/Forward navigation history to preserve forward entries and avoid duplicate stops.
-- Increase bracket matching limits for larger files and long logical lines.
-- Prefer the outermost fold region when multiple Flutter-style widget constructors start on the same line.
-- Place Git blame ghost text after folded line placeholders instead of inside the folded region.
+- Fix Project Search opening results in an already-open editor tab without switching focus to that editor.
+- Fix Project Search preview edits not respecting the IDE auto-save setting.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.

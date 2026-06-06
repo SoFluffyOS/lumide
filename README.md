@@ -1,71 +1,63 @@
-# 🦊 Lumide — Pure Light. Pure Speed.
+# 🦊 Lumide — The Agent-Native IDE.
 
-[![Lumide](https://lumide.dev/favicon.ico)](https://github.com/SoFluffyOS/lumide)
-![Built with Flutter](https://img.shields.io/badge/Built%20with-Flutter-02569B?style=flat&logo=flutter)
+<img p align="center">
+  <img src="https://lumide.dev/icon-192.png" width="20" height="20">
+  <img src="https://img.shields.io/badge/Built%20with-Flutter-02569B?style=flat&logo=flutter">
+</img>
 
-**Lumide** is a desktop-first code editor built with **Flutter** and **Impeller**, providing GPU-accelerated rendering and an ultra-smooth editing experience. The legacy Electron era ends today.
+**Lumide** is an IDE built with **Flutter**. It features a GPU-accelerated architecture and first-class support for AI agents.
 
 [Website](https://lumide.dev) | [Documentation](https://docs.lumide.dev) | [Blog](https://blog.lumide.dev)
 
+![](https://lumide.dev/assets/hero-screenshot-Bow8SDVO.webp)
+
 ---
 
-## 🚀 Not just Fast. **So Fast.**
+## 🚀 Performance & Architecture
 
-Designed to be featherweight, Lumide is built from the ground up to be the fastest editor you've ever used.
+Lumide is designed for efficiency, focusing on low latency and reduced resource usage.
 
-*   **💙 Built with Flutter**: A modern, unified desktop experience powered by the same engine that drives high-performance mobile apps.
-*   **⚡ Blazing Fast Editor**: Custom-built text rendering engine with virtualized scrolling and a **Rope-based** data structure (O(log n) operations).
-*   **🧠 Memory Efficient**: Ultra-light footprint (~80 MB idle). No more multi-gigabyte RAM overhead from browser-based editors.
-*   **💎 GPU Accelerated**: Leveraging the **Impeller** engine for silky-smooth 120 FPS rendering on modern displays.
-*   **🔌 Infinite Extensibility**: Tap into the world's largest Dart ecosystem. Install themes, language servers, and tools directly from **pub.dev**. Hot-load plugins with ease.
-*   **🤖 AI-Powered Completion**: High-performance inline suggestions via plugins. Support for **GitHub Copilot**, **Mistral Codestral**, and **Mercury** with silky-smooth **"Ghost Text"** UX.
-*   **🕵️ AI Agent Protocol (ACP)**: First-class support for autonomous AI agents. Connect to **Claude, Gemini, OpenAI, goose, Cline**, and more via the Agent Client Protocol.
-*   **🐶 C.O.R.G.I. Git Client**: A flow-driven Git interface with a "Split-Brain" layout. Features **Context-First navigation**, **Granular Staging**, **Integrated Stash**, and **Interactive Diff Editor**.
-*   **🛠️ Rich Intelligence**: Full **LSP** support for completions, diagnostics, and go-to-definition. First-class support for **Dart & Flutter**.
-*   **🌿 Native Git Insights**: Inline **Git Blame** (Ghost Text), status colors in file tree, and **Gutter/Scrollbar diff markers** (Added, Modified, Deleted).
-*   **🎹 Muscle Memory**: Customizable keymaps with presets for **JetBrains**, **VS Code**, and **Sublime Text**.
-*   **🗂️ Flexible Pane System**: A docking system that adapts to your workflow, keeping your workspace organized.
+*   **💙 Built with Flutter**: A unified desktop experience.
+*   **⚡ Text Rendering**: Custom-built engine using a **Rope-based** data structure (O(log n) operations). **Cold starts in under 200ms.**
+*   **🧠 Resource Usage**: Footprint of ~80 MB idle.
+*   **💎 Rendering**: 120 FPS performance across the editor and terminal via a GPU-accelerated graphics pipeline.
+*   **🔌 Extensibility**: Access to the Dart ecosystem (pub.dev) for themes, language servers, and plugins.
+*   **🤖 AI Integration**: Support for inline suggestions and **"Ghost Text"** UX.
+*   **🕵️ Agent-Native Architecture**: Integration for AI agents using the **Agent Client Protocol (ACP)**. Features native ACP agent hosting.
+*   **🐶 C.O.R.G.I. Git Client**: Git interface with a "Split-Brain" layout, context navigation, and granular staging.
+*   **🛠️ Language Support**: **LSP** support for completions, diagnostics, and go-to-definition. Optimized for **Dart & Flutter**.
+*   **🌿 Git Integration**: Inline status colors and gutter markers for modified lines.
+*   **🎹 Keybindings**: Customizable keymaps with presets for common editors.
+*   **🗂️ Workspace Layout**: A docking system for managing the editor workspace.
 
 ---
 
 ## 📦 Download
 
-Visit **[lumide.dev](https://lumide.dev)** to download the latest version for your platform.
+Visit **[lumide.dev](https://lumide.dev)** to download for your platform.
 
-Alternatively, you can find all versions on our [Releases](https://github.com/SoFluffyOS/lumide/releases) page.
+Alternatively, versions are available on the [Releases](https://github.com/SoFluffyOS/lumide/releases) page.
 
 - **macOS** (Universal / Apple Silicon)
 - **Windows** (x64)
-- **Linux** (Coming Soon)
+- **Linux** (x64 / ARM64)
 
 ---
 
 ## 📂 Repository Structure
 
-This repository ([SoFluffyOS/lumide](https://github.com/SoFluffyOS/lumide)) serves as the public host for Lumide compiled releases and issue tracking. 
+This repository ([SoFluffyOS/lumide](https://github.com/SoFluffyOS/lumide)) hosts Lumide releases and issue tracking. 
 
 - `README.md`: This file.
-- `CHANGELOG.md`: Current version release notes.
-- `CONTRIBUTING.md`: Feedback and bug report guidelines.
-
----
-
-## 🏗️ Technical Integrity
-
-Lumide is engineered with a strict performance mandate: **one keystroke should touch O(log n) rope nodes, a handful of visible lines, and nothing else synchronously.**
-
-- **Virtualized Rendering**: Only what you see is what we draw.
-- **Asynchronous Pipeline**: Syntax highlighting and diagnostics run off the main thread to keep the input loop lag-free.
-- **Rope Data Structure**: High-performance text manipulation that handles large files with ease.
+- `CHANGELOG.md`: Version release notes.
+- `CONTRIBUTING.md`: Guidelines for feedback and reports.
 
 ---
 
 ## 🛡️ Privacy & Security
 
-Lumide is designed to be a private and secure tool for developers.
-- **Local First**: Your code stays on your machine.
-- **No Telemetry**: We don't track your keystrokes or project data.
-- **Zero bloat**: No background analytics processes.
+- **Local First**: Files remain on the local machine.
+- **Minimal Telemetry**: No tracking of keystrokes or project data.
 
 ---
 
@@ -79,3 +71,4 @@ Join the journey to build the ultimate developer environment.
 ---
 
 *Made with 💖 by SoFluffy in 2026.*
+
