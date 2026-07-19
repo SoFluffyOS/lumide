@@ -1,26 +1,42 @@
-# Lumide 0.15.0
+# Lumide 0.16.0
 
 ### Enhancements
 
-#### Workspace
-- Un-trusted by default: LSP, plugins, workspace-level settings will be disabled unless you trust a workspace.
-- Support to remove recent project.
+#### New Pane support
+- Diff Pane: Easily compare differences between 2 text.
+- Add `Compare with Clipboard` menu to file/editor/editor tab context menu.
+
+#### JSON Viewer enhancement
+- Add `Open in JSON Viewer` menu option for JSON files.
+- Support format JSON file using built-in `Reformat Code` action.
+- Count JSON Array and JSON Object length within JSON Viewer.
+
+#### C.O.R.G.I.
+- Refine UI to have more space for the changelist.
+- Add Split layout (Stage/Unstaged) for changelist (disable in Settings > Git).
+- Optimize performance of git operations (a lot).
+
+#### Project Search
+- Add Project Search pane to Add Pane menu.
+- Add a button to open search result in left pane.
+- Allow toggle Preview panel within Project Search popup.
 
 #### Terminal
-- Use `xterm: 5.0.0` and `flutter_pty2: 1.0.0`.
-- Improve terminal rendering, OSC links, and high-output responsiveness.
+- Upgrade `xterm 5.1.0`, `flutter_pty2 1.0.1`.
+- Hide terminal process loading indicator in tab bar when the terminal tab is active, replace terminal tab icon with loading indicator.
+- Improve terminal glyph rendering, OSC links/colors, clear behavior, PTY stability, notifications, cursors, and progress.
 
-#### Agent Chat
-- :boom: BREAKING: Chat message history of Custom Agent now stored within `$HOME/.sofluffy/lumide/chats` separately for each workspace.
-- Support to remove chat history of Custom Agent.
-- Add more tool calls for custom OpenAI-compatible agents: `update_conversation_title`, `git_add`, `git_commit`, `git_branches`, `git_commits`, `git_status`, `git_diff`, `git_current_branch`, `git_show`, `git_log`, `git_remotes`, `git_stashes`, `git_branch_diff`
-
-#### Files.
-- Add New Launch Configuration context menu to easily add launch.json config.
+#### Workspace
+- Support  open a single file without open any workspace/folder.
+- Improve responsiveness during large filesystem changes.
 
 #### New APIs support
-- Upgrade to `lumide_api: 1.7.0`.
-- Add Launch configuration support — Validate, import, and resolve persistent configurations from `.sofluffy/lumide/launch.json`.
+- Add `context.workspace.getPluginStorageDir()` for plugins to resolve a private, profile-aware writable storage directory.
+- Allow plugin operations inside their `getPluginStorageDir()` directory without requiring extra `fileSystem` manifest permissions.
+
+### Fixed
+- Fix light color scheme not preserve after rename an active file.
+- Fix Output panel selection loss when scrolling.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.
