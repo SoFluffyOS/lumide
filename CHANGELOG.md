@@ -1,3 +1,8 @@
+# Lumide 0.16.1
+
+### Fixed
+- Fix clicking on result within Project Search removed that search result from the list.
+
 # Lumide 0.16.0
 
 ### Enhancements
