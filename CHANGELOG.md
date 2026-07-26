@@ -1,47 +1,20 @@
-# Lumide 0.16.1
-
-### Fixed
-- Fix clicking on result within Project Search removed that search result from the list.
-
-# Lumide 0.16.0
+# Lumide 0.17.0
 
 ### Enhancements
 
-#### New Pane support
-- Diff Pane: Easily compare differences between 2 text.
-- Add `Compare with Clipboard` menu to file/editor/editor tab context menu.
+#### Files
+- **File Nesting support**: Group related files under expandable parents (enable it in *Settings* > *Files*).
 
-#### JSON Viewer enhancement
-- Add `Open in JSON Viewer` menu option for JSON files.
-- Support format JSON file using built-in `Reformat Code` action.
-- Count JSON Array and JSON Object length within JSON Viewer.
-
-#### C.O.R.G.I.
-- Refine UI to have more space for the changelist.
-- Add Split layout (Stage/Unstaged) for changelist (disable in Settings > Git).
-- Optimize performance of git operations (a lot).
-
-#### Project Search
-- Add Project Search pane to Add Pane menu.
-- Add a button to open search result in left pane.
-- Allow toggle Preview panel within Project Search popup.
+#### Editor
+- Add syntax highlighting for C#, SQL, PHP, Ruby, Sass/SCSS, Lua, Zig, TOML, INI/properties, dotenv, Dockerfile/Containerfile, Makefile, CMake, Objective-C, Scala/SBT, Groovy/Gradle, Elixir, Erlang, Haskell, R, Nix, and Protocol Buffers.
+- Add richer color scheme support.
+- Improve mixed-language highlighting for JSX/TSX, HTML, Vue, Svelte, and language-tagged Markdown code blocks.
+- Improve highlighting responsiveness and memory use while editing files.
 
 #### Terminal
-- Upgrade `xterm 5.1.0`, `flutter_pty2 1.0.1`.
-- Hide terminal process loading indicator in tab bar when the terminal tab is active, replace terminal tab icon with loading indicator.
-- Improve terminal glyph rendering, OSC links/colors, clear behavior, PTY stability, notifications, cursors, and progress.
-
-#### Workspace
-- Support  open a single file without open any workspace/folder.
-- Improve responsiveness during large filesystem changes.
-
-#### New APIs support
-- Add `context.workspace.getPluginStorageDir()` for plugins to resolve a private, profile-aware writable storage directory.
-- Allow plugin operations inside their `getPluginStorageDir()` directory without requiring extra `fileSystem` manifest permissions.
-
-### Fixed
-- Fix light color scheme not preserve after rename an active file.
-- Fix Output panel selection loss when scrolling.
+- Upgrade `xterm2 5.2.0` and `flutter_pty2 1.0.2`.
+- Support text search within Terminal (`Cmd`/`Ctrl` + `F` within Terminal to trigger).
+- Improve terminal rendering, search, links, input, scrolling, and PTY stability.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.
