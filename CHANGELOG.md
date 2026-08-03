@@ -1,20 +1,40 @@
-# Lumide 0.17.0
+# Lumide 0.18.0
 
 ### Enhancements
 
-#### Files
-- **File Nesting support**: Group related files under expandable parents (enable it in *Settings* > *Files*).
+#### C.O.R.G.I.
+- Add a separate `Stashes` tab. You can now preview stash content before taking any actions.
+- Add `Remotes` tabs to view/add/edit/remove remote.
+- Add a review dialog before pusing commits (press `Cmd/Ctrl + Shift + K` or access in `Git` > `Push...` menu).
+- Add `Git Rollback` action to roll backc an unstaged change at the editor cursor or all changes in selected files and folders (press `Cmd/Ctrl + Alt + Z` or access in `Git` > `Rollback...` menu).
+- Add option to `Discard All Changes...` or `Discard Unstaged Changes...` when discarding files and folders with both staged and unstaged changes.
 
 #### Editor
-- Add syntax highlighting for C#, SQL, PHP, Ruby, Sass/SCSS, Lua, Zig, TOML, INI/properties, dotenv, Dockerfile/Containerfile, Makefile, CMake, Objective-C, Scala/SBT, Groovy/Gradle, Elixir, Erlang, Haskell, R, Nix, and Protocol Buffers.
-- Add richer color scheme support.
-- Improve mixed-language highlighting for JSX/TSX, HTML, Vue, Svelte, and language-tagged Markdown code blocks.
-- Improve highlighting responsiveness and memory use while editing files.
+- Add a Filter within code Quick Actions.
+- Improve `JSON` and `YAML` syntax highlight to provide more colors.
+- Support to press Backspace to remove empty white space quickly.
+- Add new action `Extend Selection Word Left/Right with CamelHumps Mode`.
+- Correct `Extend Selection Word Left/Right` to only select words separated by space.
 
-#### Terminal
-- Upgrade `xterm2 5.2.0` and `flutter_pty2 1.0.2`.
-- Support text search within Terminal (`Cmd`/`Ctrl` + `F` within Terminal to trigger).
-- Improve terminal rendering, search, links, input, scrolling, and PTY stability.
+#### Files
+- Switch editor tab now won't Reveal active file as default (configurable in `Settings` > `Files` > `Auto Reveal Active File`).
+- Click on an active editor tab to Reveal the file in Files pane (configurable in `Settings` > `Files` > `Reveal File on Active Tab Click`).
+- Choose whether `File Open Mode` opens files on a single click or selects them until double-clicked.
+- Control automatic Files pane selection with `Auto Reveal Active File`.
+- Enable `Reveal File on Active Tab Click` to reveal files only when their active editor tab is clicked.
+
+#### Pane System
+- Browse or filter Add Pane options, then use Up/Down and Enter to choose a pane.
+- Use `View` > `Add Pane` and `Toggle Pane` menus.
+- Agent Chat now will be show as default pane in Right pane.
+
+#### Project Search
+- Add customizable shortcuts for Match Case, Whole Word, Regex, Replace, Preserve Case, Ignored Files, and Preview.
+
+#### Settings
+- **General**: Add `Confirm Before Exiting the IDE` to skip the quit prompt while still saving files and application state.
+- **Editor**: Add `Show JSON Annotations` to show or hide object and array counts in the JSON Viewer.
+- **Keymap**: Support to remove keybindings to any shortcut.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.
