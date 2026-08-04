@@ -1,3 +1,8 @@
+# Lumide 0.18.1
+
+### Fixed
+- Double-tap not open search result in Project Search dialog.
+
 # Lumide 0.18.0
 
 ### Enhancements
