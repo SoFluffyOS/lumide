@@ -1,3 +1,8 @@
+# Lumide 0.18.2
+
+### Fixed
+- Fix a Settings UI crashed due to enum parsing failure after editing AI policy options.
+
 # Lumide 0.18.1
 
 ### Fixed
