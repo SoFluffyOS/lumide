@@ -1,35 +1,38 @@
-# Lumide 0.21.0
+# Lumide 0.22.0
 
 ### Enhancements
 
-I've replaced all `figma_squircle` usages with Flutter's built-in `RoundedSuperellipseBorder`. You'll see slightly performance improvement across the editor. Thanks to [@rydmike](https://github.com/rydmike) for his [squircle_study](https://github.com/rydmike/squircle_study).
-
-#### SDK Manager
-- Introducing SDK Manager with built-in Dart SDK management.
-- Plugins can leverage the new APIs to use the same SDK management UI. (E.g: `lumide_flutter` uses this to manage Flutter versions).
+#### Run & Debug
+- Add keyboard shortcuts to Run, Debug, and Stop.
+- Add top-level `Run` menu and shortcut hints in toolbar tooltips.
+- Open debug controls in the left pane and show session logs in the separate Output pane.
+- Compact the Debug header and add a menu to show or hide Stacktrace, Variables, and Breakpoints.
 
 #### Editor
-- Allow to switch between Subtle or Eager modes for AI Completion. Subtle mode default to use Alt/Option key to show the AI suggestion.
+- Add CodeLens support for language servers, including clickable actions in the editor.
+- Add syntax highlighting for Jenkinsfile and nginx configurations file.
+
+#### Plugins & Panes
+- Allow plugins to open webview panels in any pane region.
+- Match Debug and Output headers to Files, make Debug sections transparent, and reduce the gap below the Debug header.
+- Move Output visibility options to the filter icon, add a search button, and use a trash icon for clearing output.
 
 #### Terminal
-- Add Terminal Profiles configurations (Settings > Terminal).
-- Allow to quickly open any Terminal profile within Add Pane > Terminal expanded menu.
+- Upgrade `flutter_pty2: 2.0.0` with performance tweaks.
 
-#### Settings
-- Add Theme/Color Scheme Preview.
-- Enable soft wrap by default for Markdown files (`.md`, `.mdx`, `.markdown`).
-- Support per-language settings overrides for 35 additional languages in Editor and Vim settings scopes: Batch, CMake, CSS, Dockerfile, Dotenv, Elixir, Erlang, Groovy, Haskell, HTML, INI, JavaScript React (JSX), JSON, Kotlin, Lua, Makefile, Markdown, Nix, Objective-C, Objective-C++, PowerShell, Protocol Buffers, R, Ruby, Scala, SCSS, Shell Script, SQL, Svelte, TOML, TypeScript React (TSX), Vue, XML, YAML, and Zig.
-
-#### New APIs support
-- Upgrade to `lumide_api: 1.10.0`.
-- Add `workingDirectory` param for shell spawn API.
-- Allow plugins to be started manually from Plugin Manager.
+#### Agent Chat
+- Support authentication flow for agents.
+- Add a settings to Display raw HTML Tags in chat message instead of rendering them as HTML.
+- Add message queue. You can interrupt and send immediately or just wait for the next turn.
+- Add token usage progress bar with token context window metrics.
+- Allow to restore rejected agent changes within 10-second countdown.
+- Add ACP Protocol Inspector to view JSON-RPC messages and stderr output.
+- Support for project and global `AGENTS.md` rules and `SKILL.md` agent skills with `/skill` autocompletion.
 
 ### Fixed
-- Fix environment variables not detected in some cases.
-- Fix context menu description overflow.
-- Fix YAML syntax highlighter mistakenly treating asterisks in file globs and paths (e.g. `**/*.dart`) as anchor/alias tokens.
-- Fix C.O.R.G.I commit message & Agent Chat input content getting lost upon tab switching.
+- Fix Agent Chat not restored user's messages correctly.
+- Fix cannot enter chat message in second+ Agent Chat.
+- Fix some text contrast issue.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.
