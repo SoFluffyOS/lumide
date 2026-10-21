@@ -1,68 +1,70 @@
-# Lumide 0.23.0
+# Lumide 0.24.0
 
-C.O.R.G.I. gets its biggest update yet: a branch tree, lazygit-style keys, a PR-style review and a full merge conflict editor.
+Lumide goes multiplayer: share a workspace with anyone from a link, or work on another machine over SSH.
 
 ### Enhancements
 
-#### C.O.R.G.I.
-- **Conflict Editor**: Linear, Side by Side or Three Panels. Pick Current, Incoming or Both from the keyboard; a wand fixes simple conflicts.
-- **Paused Operations**: One banner for merges, rebases, cherry-picks and reverts: resolve, then Continue, Skip or Abort.
-- **Review**: Every uncommitted change in one scroll, like a pull request. Edit, stage or discard each hunk.
-- **Branches**: Branches, remotes and tags in one tree, with folders, favourites and ahead/behind counts.
-- **Branch Switcher**: Fuzzy search, recent first, create from your query, stash-and-switch.
-- **Graph**: All branches, stashes and working changes. Search the whole history and cherry-pick or revert several commits at once.
-- **Keyboard**: lazygit-style keys in every panel, all rebindable. Press `?` for the list.
-- Conflict bars in normal editor tabs.
-
-#### Git
-- **Git Avatars**: Author and co-author avatars in Blame and Commit Inspector.
-- **Git Hosting Providers**: GitHub, GitLab, Bitbucket, Azure DevOps, Gitea, Forgejo, SourceHut and self-hosted.
-- Blame popup previews line changes; click the hash to inspect the commit.
-- Open Commit Inspector as a modal or a tab.
-- Diff view mode and soft wrap are remembered.
-
-#### Run & Debug
-- Edit breakpoint conditions and log messages from the Breakpoints panel.
-- Add Tests pane for plugin test runs, with a failed-only filter.
-
-#### New APIs support
-- Upgrade to `lumide_api: 1.12.0`. 💥 BREAKING: `on*` listeners now return a `LumideDisposable`.
-- Formatting, Diagnostics and Progress APIs: plugins can format documents, report problems and show status bar progress.
-- Tests API: report test runs to the new Tests pane.
-- Commands API: `commands.executeCommand`; `onCommand:` commands show in the Command Palette before the plugin starts.
-- Workspace events: `onDidChangeTextDocument` now receives edits; add `onDidChangeFiles`.
-- Process API: `environment` and `stdin` for shell commands, signals for `shell.kill`, and `sdks.spawn`.
-- Keybindings: `mod` key (Cmd on macOS, Ctrl elsewhere) and `when` clauses.
-- Debug API: `logMessage` for breakpoints.
-- Manifest `executable` field for asset-only plugins, and per-extension language IDs for language servers.
-
-#### Editor
-- Syntax highlighting for Git files, `.plist` and lockfiles.
-- Multiline regex in Find & Replace.
-
-#### Language Servers
-- Run several language servers per file.
-- Stop or disable a language server per workspace.
+#### Remote Development
+- **[Share a Workspace](https://docs.lumide.dev/workspace/collaboration)**: Anyone joins from a link, in Lumide or their browser, as Viewer, Editor or Trusted. Share terminals and Agent Chats too, or run your own relay on a spare Android phone.
+- **[Remote SSH](https://docs.lumide.dev/workspace/remote-ssh)**: Open a folder on another machine; files, terminals, Git and language servers run there.
+- **[Lumide in the Browser](https://docs.lumide.dev/workspace/web)**: Serve a workspace to any browser with `lumide_server serve`.
 
 #### Workspace
-- Move, resize and maximize dialogs; drag the window while one is open.
-- Hide empty pane regions automatically.
-- Open the active `settings.json` from the settings header.
+- **[Multi-root Workspaces](https://docs.lumide.dev/workspace/multi-root)**: Several folders in one window, saved as a `.lumide-workspace` file, each with its own settings.
+- **Open with Lumide**: From your file manager, by drag & drop, or `lumide --add <folder>`.
+- **[Plugin Recommendations](https://docs.lumide.dev/plugins)** for the files you open.
+- Clone a repository from the Welcome screen.
+- **Import Settings** from VS Code, Cursor, Zed or another Lumide: found on your machine, pasted, or from a file.
+- Project Search: search some folders only, and exclude files. Find in Files can open in the Search Pane instead of a dialog.
+- **Bottom Panel Layout**: Run the bottom panel across the whole window, or under the left or right panel.
+- **Starting Layout**: Start new windows the way Lumide or VS Code lays them out.
+- **Onboarding** asks which editor you're coming from, sets its shortcuts and layout, and offers to bring your settings over.
+
+#### Git
+- **AI Commit Messages**: Suggestions in your repository's style.
+- **[Line History](https://docs.lumide.dev/git)** and **Several Repositories**: see who changed the selected lines, and fetch, pull, push and commit across repositories.
+- Filter branches in the branch menu.
+
+#### Editor
+- Undo in natural steps, copy the whole line with nothing selected, and placeholders for binary files.
+- Paste a copied file to insert its path.
+- Syntax colors for SVG, with the CSS in its `<style>`, and XML formats such as `.csproj`, `.xaml` and `.storyboard`.
+- **Mermaid Diagrams**: Class, state, ER, mindmap, git graph and many more diagram types in the Markdown preview, drawn in your theme.
+
+#### Run & Debug
+- **[Tests Pane](https://docs.lumide.dev/debugging)**: Run, rerun and debug tests, with lenses above Dart tests and coverage from plugins.
+- Launch configurations and SDKs per workspace folder.
+
+#### AI
+- **[Agent Comments](https://docs.lumide.dev/ai)**: Comment on lines, diffs or the agent's changes, then send them all at once.
+- Type in Agent Chat before an agent connects, reopen recent chats, and copy a message as HTML.
+
+#### New APIs support
+- Upgrade to `lumide_api: 1.13.0`: workspace folder APIs, `runsPerFolder` for language servers, and `InlineCompletionRequest.instructions`.
 
 ### Fixed
-- Fix C.O.R.G.I. with non-ASCII file names.
-- Fix C.O.R.G.I.'s "Accept All Conflicts" writing the file path into the file.
-- Fix creating a branch from a commit; new branches no longer track their source branch.
-- Show files inside new untracked folders, stashes and merge commits in C.O.R.G.I.
-- Fix crash in Add Custom Agent dialog.
-- Fix `Show JSON Annotations` ignored when disabled.
-- Fix blame diff paths on Windows and in sibling folders.
-- Keep edits during saves, tab close and Vim save-and-quit.
-- Keep unsaved markers and AI completions after renames and Save As.
-- Keep Git file highlighting after opening files, switching themes and renaming.
-- Keep ANSI colors in truncated output.
-- Keep Hot Exit backups when a restore fails.
-- The font picker no longer blocks the UI.
+- CORGI: the commit message is readable in light themes.
+- Agent Chat: code in Review Changes is colored for light themes too.
+- Notifications use their own colors, so a notice no longer looks like an error.
+- Fix the hierarchy gutter not showing; it's also faster in large files.
+- CSS written without spaces, such as `a{color:red}`, no longer shows property names twice.
+- Markdown preview: a tag in code, such as `<style>`, no longer hides the rest of the page.
+- Read-only views, such as diffs, no longer change on Paste, Tab, Move Line or Undo.
+- CORGI: ticking a file in separate staged and unstaged lists no longer shows the next file ticked.
+- Faster typing in long sessions, and faster saves, also for large files.
+- Format on save skips a formatter slower than 5 seconds.
+- The launch dropdown keeps your selected configuration at startup.
+- Git, language servers and plugins started at launch get your shell's `PATH`.
+- Fix Inline Blame and its delay setting.
+- Stage All skips files with conflict markers; switching to a missing branch no longer discards changes.
+- Rolling back, discarding or unstaging a file whose name has `[`, `*`, `?` or a leading `-` touches only that file.
+- Push and Force Push send only the current branch, to its own name, never onto another branch.
+- Plugins installed from the marketplace start right away.
+- Terminals report real exit codes.
+- Keep folds, highlighting and breakpoints in place after multi-cursor edits.
+- Project Search file patterns work as expected, and Find in Folder searches only that folder.
+- Project Search and Quick Open include `bin` folders, where Dart and Go keep sources.
+- **Linux**: Updates for the right architecture, `PATH` from your shell profile, Open With, trash, and the `Alt` app menu.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.
