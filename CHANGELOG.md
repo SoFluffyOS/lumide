@@ -1,96 +1,52 @@
-# Lumide 0.25.0
+# Lumide 0.26.0
 
-Your code lives on a board now, your agents work together, and you can try Lumide with Dart and Flutter in your browser at [dartpad.lumide.dev](https://dartpad.lumide.dev).
-
-Lumide needs macOS 12 Monterey or later. On macOS 10.15 or 11, keep 0.21.0.
+Find your way around code the IntelliJ way: usages, call hierarchy, the file's structure, sticky scroll and inlay hints, with the keys you already know. And C.O.R.G.I. can now drop, reword and squash commits.
 
 ### Enhancements
 
-#### 🌐 DartPad
-- **[DartPad](https://docs.lumide.dev/workspace/dartpad)**: Lumide in your browser, no install, no server. Dart and Flutter with pub.dev packages, real analysis, Run, hot reload and DevTools. Open any GitHub repo, package or Gist, and take it home as a zip.
+#### 🧭 Code Intelligence
+- **[Go to Type Definition, Implementation and Super Member](https://docs.lumide.dev/languages/hover-and-definitions#type-definition-implementation--super-member)**: `Ctrl + Shift + B`, `Cmd + Alt + B` and `Cmd + U`, as in IntelliJ.
+- **[Sticky scroll](https://docs.lumide.dev/editor#sticky-scroll)**: The class and method you're in stay pinned at the top of the editor, and open folders at the top of Files.
+- **[Inlay hints](https://docs.lumide.dev/editor#inlay-hints)**: Hold `Ctrl + Option` to see inferred types and parameter names in the code. Double-click one to write it in.
+- **[Spell check](https://docs.lumide.dev/editor#spell-check)**: Typos in comments, strings and names get a faint underline. Right-click to fix one or add it to a dictionary.
+- **[Surround With](https://docs.lumide.dev/editor/snippets#surround-with-cmd--alt--t)**: `Cmd + Alt + T` wraps the selection in an if, a loop, a try or a Flutter widget.
+- **[Postfix completion](https://docs.lumide.dev/editor/snippets#postfix-completion)**: `user.isActive.if` becomes `if (user.isActive) {}`. `.var`, `.for`, `.not` and more, in Dart.
+- **[Usages pane](https://docs.lumide.dev/languages/hover-and-definitions#find-usages-alt--f7)**: Every usage of a symbol, by file, to work through with Next Usage. `Alt + F7`, as in IntelliJ.
+- **[Call Hierarchy](https://docs.lumide.dev/languages/hover-and-definitions#call-hierarchy-ctrl--alt--h)**: Who calls a function, and what it calls, as a tree in a pane of its own.
+- **[Symbols in the breadcrumb](https://docs.lumide.dev/getting-started/interface)**: The editor header goes on past the file to the class and member you're in. Click one to jump through the file.
+- **[Structure pane](https://docs.lumide.dev/navigation#structure-pane-cmd--7--alt--7)**: The file's classes and members as a tree that follows your caret. `Cmd + 7`, as in IntelliJ.
 
-#### 🦉 Layout
-- **[O.W.L.](https://docs.lumide.dev/workspace/split-panes)** (Overview With Links): Lay your code out on a board. A pane opened from another lands beside it, linked, so the path you took stays in view.
-- **[Focus Mode everywhere](https://docs.lumide.dev/workspace/split-panes)**: `Shift + Esc` fills the window with the focused pane, in any layout. Hold it to peek.
-- **[Switch frames](https://docs.lumide.dev/workspace/split-panes)** with `Ctrl + Tab`, the most recent first.
-- **[Where Panes Open](https://docs.lumide.dev/getting-started/interface)**: Code-first or Agent-first.
-- **Editor header**: Every editor names its file's path. Click a folder in it to browse.
-- Narrow windows keep the title bar tidy, with a `⋯` for what doesn't fit.
+#### ✏️ Editor
+- **[Previews as you left them](https://docs.lumide.dev/editor/markdown-preview#display-modes)**: A Markdown, SVG or HTML file opens in the mode you last picked for its kind. Drag the line of a split view to resize it, and a narrow pane puts the preview below the code.
+- **[Long Line Wrap](https://docs.lumide.dev/editor#soft-wrap)**: With soft wrap off, only lines over 2,000 columns wrap, to keep minified files fast. The header says when they do, and Settings → Editor → Long Line Wrap changes the limit.
 
-#### 🤖 Agents
-- **[Chats in a worktree](https://docs.lumide.dev/ai#chats-in-a-worktree)**: Each chat gets its own Git worktree and branch, so agents never touch your checkout. Apply, merge or open a pull request when it's done.
-- **[Chats agents start](https://docs.lumide.dev/ai#chats-agents-start)**: An agent starts other chats, with any agent, and hears back when they finish. Claude Code asking Codex to review its diff, say.
-- **[Lumide's tools for agents](https://docs.lumide.dev/ai)**: Rename, format, fix problems, find references, run tests, debug, read your terminals and drive an iOS Simulator, through Lumide instead of `sed`.
-- **Agents sidebar**: Every chat in one place, with what each is doing, plus the coding agents running in your terminals. **[Usage](https://docs.lumide.dev/ai)** shows today's spend and how close you are to a rate limit.
-- **[Plan review](https://docs.lumide.dev/ai)**: Read an agent's plan as a document before any code is written, and comment on it.
-- **Review what agents change**, even files a command like `sed` changed, in one editable scroll, with Accept and Reject per file or hunk.
-- **[Files kept from AI](https://docs.lumide.dev/ai)**: `.env` files and private keys never reach completions, commit messages or Agent Chat. Add your own in a `.aiignore`.
-- **MCP Servers**: See every server your agents get, from every workspace folder, each checked for its tools.
-- **[Environment variables](https://docs.lumide.dev/ai)** for agents: a value from the keychain, or a command such as `gh auth token`.
-- Allow a command by its leading words, such as `flutter test`, for this workspace or everywhere.
-- Send the problems a turn left behind back to the agent in one click, or automatically.
-- A notification when a chat needs you, finishes or fails.
+#### 🗂️ Workspace
+- **[Where Panes Open, for every tool](https://docs.lumide.dev/getting-started/interface#where-panes-open)**: Search, Structure, Problems, Output, Tests, Debug, previews and the rest each have a place of their own, and stay where you move them. Agent-first opens the tools on the right and previews beside Agent Chat.
+- **[Open with Lumide](https://docs.lumide.dev/workspace/workspaces#open-with-lumide-from-your-file-manager)**: Right-click a folder or file in Finder, File Explorer, Dolphin or Files to open it in Lumide. On Windows and Linux, Lumide asks before adding it.
+
+#### 🐶 C.O.R.G.I.
+- **[Commit dates](https://docs.lumide.dev/git/corgi#visual-commit-graph)**: Hover a date for how long ago it was and its time zone, or show every date as "3 days ago" with Commit Date Format. Click a hash to copy it.
+- **[Hidden lines](https://docs.lumide.dev/git/corgi#staging-files--hunks)**: Each hunk starts with how many unchanged lines it hides and the function it's in, instead of Git's `@@ -248,7 +248,7 @@`. Hover it to show 20 more lines, or all of them.
+- **[Drop, Reword, Squash and Fixup](https://docs.lumide.dev/git/corgi#rewriting-history)**: Right-click commits in the graph, or press `d`, `r`, `s` or `f` as in lazygit. One rebase that keeps merges and your local changes, with Undo right after.
+- **[Tags](https://docs.lumide.dev/git/corgi#branches-tab)**: `T` tags a commit or a branch, annotated when you give it a message, and can push it right away. `P` pushes a tag and `d` deletes it here, on a remote or both, as in lazygit. The graph shows every tag on a commit, and Push… offers to push the tags on the commits it sends.
 
 #### 💬 Agent Chat
-- **Reads like a document**: Replies without bubbles, one message box, cards that ask and then fold away, and a turn that folds into "Worked for 2m · Changed 4 files".
-- **Smarter `@` mentions**: Open files, problems, uncommitted changes, terminals and web pages, as chips. Paste a screenshot as a picture, or code as a snippet.
-- **A new chat knows where it is**: Fix N problems, Review N changed files, or Explain the open file, in one click.
-- **Follow the agent** as it reads and edits, right at the line.
-- Commands run live in terminal cards, and subagents show as cards with Stop and their whole transcript.
-- Ghost-text completions, Up for your last messages, a chat remembers its mode and model, and closing a busy chat asks first.
-- Chats you started with `claude` or `codex` in a terminal show up too. Continue them in either place.
-
-#### 🦝 Raccoon & Flutter
-- **More sizes, one run**: Add View At shows your app at another size on the board, all reloaded together. Instant on macOS and Linux.
-- **A phone, not a desktop**: Appearance, text size, language, rotation, touch, an on-screen keyboard, deep links and push notifications. Plugins with no desktop version answer as a phone would.
-- **[Design Mode](https://docs.lumide.dev/ai#design-mode-for-flutter-apps)**: Click a widget and it lands in Agent Chat, with its picture and code.
-- **Agents use your app**: `raccoon_find` and `raccoon_input` tap, type and scroll by widget, and `flutter_reload` hot reloads after an agent's edit.
-- **[iOS Simulator in a frame](https://docs.lumide.dev/languages/flutter-and-dart)** (macOS): Boot a simulator right beside your code, no Simulator app. Slim This Sim cuts its memory to a quarter.
-- One-click Raccoon setup from Runtime Control, and fast runs that compile nothing by default.
-- **[Color and icon previews](https://docs.lumide.dev/editor)**: A swatch with a color picker before each color, and Flutter's icons right in the code.
-
-#### 📝 Markdown & HTML
-- **Lumide's own Markdown engine**: Renders like GitHub, alerts included, and long files scroll smoothly. Agent Chat messages take about half the memory.
-- **Edit in the preview**, with a formatting toolbar and the shortcuts you know. Off by default.
-- Copy tables into Docs, Notion or Sheets the right way, and zoom into big Mermaid diagrams.
-- **[HTML Preview](https://docs.lumide.dev/editor/html-preview)**: Preview HTML beside the editor, drawn without a WebView, with an inspector that jumps to the source.
-
-#### ✏️ Editor & Workspace
-- **[New Project](https://docs.lumide.dev/workspace/workspaces#creating-a-project)**: Templates for Dart, a static site or a Lumide plugin, plus the ones your plugins add.
-- **[Next edits](https://docs.lumide.dev/ai)** with GitHub Copilot: Predictions that change and remove code, shown beside it.
-- **[Bookmarks](https://docs.lumide.dev/navigation)**, a **[TODOs](https://docs.lumide.dev/navigation/project-search)** pane, **[filtered Problems](https://docs.lumide.dev/languages/diagnostics-and-problems)** and a sharper **[Diff pane](https://docs.lumide.dev/git/diff-viewer#the-diff-pane)**.
-- **[Rename in the Files pane](https://docs.lumide.dev/getting-started/interface)**, with the imports that name the file updated.
-- **[Local History](https://docs.lumide.dev/workspace/local-history)**: Every change and who made it, you or an agent. Restore in one step.
-- **[Settings](https://docs.lumide.dev/customization/settings)**: Reorganized, with a search that narrows the sidebar.
-- **[Python versions](https://docs.lumide.dev/customization/sdk-manager)** per folder with the Python plugin, and Gauge specs highlighted.
-- **[Plugin updates](https://docs.lumide.dev/plugins)** checked on startup, with Update All.
-- **[Reduce Motion](https://docs.lumide.dev/customization/themes)**, and spinners that use far less CPU.
-- C.O.R.G.I.: Up brings back recent commit messages, and Review Changes reads any commit in one scroll.
-- **[Smaller macOS download](https://docs.lumide.dev/getting-started/installation)**: 22 MB for your Mac instead of 63 MB.
-
-#### 🧪 Experimental
-- **[Built-in Browser](https://docs.lumide.dev/editor/html-preview#browser-panes)**: Browse your dev server right in Lumide, and let agents click through it. Off by default for now, as a heavy page can freeze Lumide. Turn it on in **Settings → Editor → HTML Preview**.
-
-#### 🔌 New APIs support
-- `lumide_api: 1.14.0`: Plugins follow your agents (`context.agents`), test runs (`tests.onDidEndRun`) and window focus (`window.onDidChangeFocus`).
+- **[Files beside Agent Chat](https://docs.lumide.dev/getting-started/interface#where-panes-open)**: With Agent Chat in the center, opening a file splits it to the right instead of covering the chat. Close the last file and the chat takes the center back.
+- **[Wide tables](https://docs.lumide.dev/ai#context--mentions)**: A table in a reply grows past the text, up to the whole pane, so its columns aren't squeezed. One wider still scrolls sideways, and Open Larger shows it in a dialog.
+- **[Message Claude Code while it works](https://docs.lumide.dev/ai#opening-agent-chat)**: It reads your message right away and keeps going, as in the Claude CLI. No more waiting for the turn to end, or stopping it.
 
 ### Fixed
-- Renaming `readme.md` to `README.md` works on macOS and Windows.
-- **VS Code keymap**: Go Back and Go Forward use VS Code's keys on every platform.
-- **Copy as HTML** pastes as formatted content into Docs, Notion or Mail.
-- Typing `I'm` no longer adds a closing quote.
-- `Ctrl + backtick` brings up the terminal wherever it lives, and hides it again.
-- Commands an agent runs report their real output and exit code, with pagers off.
-- Rejecting an agent's changes keeps your own edits made since.
-- **Revert Here** asks first, can be undone for 10 seconds, and tells the agent what was undone.
-- Copying a long terminal command copies all of it.
-- Mouse drags reach terminal apps that use the mouse.
-- Idle background terminal tabs no longer spin.
-- Quitting gives plugins time to stop their servers and apps.
-- Agent Chat's Session Config bar is back for Claude.
-- Agent comments leave the pending list once sent.
-- Old changes no longer show as pending when you reopen a chat, and Reject All fully restores a file changed several times.
-- Status bar rings match the text beside them.
+- **Clipboard reads in the terminal**: A program can no longer read your clipboard by printing an escape sequence (OSC 52), which a file shown with `cat` could do. Set `terminal.clipboard_read` to `ask` to allow it case by case.
+- **Links printed in the terminal**: Lumide asks before opening a link a program prints, so a file shown with `cat` can't open a page or an app by itself. A clicked link that isn't a web or mail link asks too.
+- **Pictures in Agent Chat**: A web picture in a reply waits for you to click Load Image, so a reply can't send your data to a server just by showing one. Pictures on another computer's share never load.
+- **Korean, Japanese and Chinese input**: Typing with a composing input method works in the editor, the terminal and Agent Chat. `한글` no longer comes out as `ㅎㅏㄴㄱㅡㄹ`.
+- **Review Changes**: Code takes your theme's syntax colors again in a light theme, and the gutter fits line numbers of three digits and more.
+- Resuming a long chat no longer lags, and its old commands and subagents stay out of the Agents sidebar while it loads.
+- A local plugin starts again after you stop it, Restart runs it again instead of only stopping it, and it runs instead of an installed copy of the same plugin until you remove it.
+- Uninstalling a plugin removes it from both Puro's pub cache and the default one, so it doesn't come back on the next start, and an update loads the version it installed.
+- Quitting Lumide or closing an Agent Chat stops the servers and commands its agent left running in the background.
+- Coming back to a file shows its problems, code lenses and inheritance marks at once, and moving quickly between files no longer keeps the language server busy with the ones you left.
+- Opening a Flutter project no longer starts the Python plugin, and files Git ignores no longer start any plugin.
 
 ---
 Visit [lumide.dev](https://lumide.dev) for more.

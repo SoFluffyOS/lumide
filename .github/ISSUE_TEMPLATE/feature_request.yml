@@ -1,0 +1,54 @@
+name: ✨ Feature request
+description: An idea for something Lumide should do.
+title: "[FEAT] "
+labels: ["enhancement", "needs triage"]
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea? 💡 Please [search the issues](https://github.com/SoFluffyOS/lumide/issues?q=is%3Aissue) first, and give a 👍 to one that's already there: that's how I see what matters most.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of Lumide is it about? (optional)
+      options:
+        - Editor
+        - Agent Chat and agents
+        - AI completions (ghost text)
+        - Languages (LSP, completion, diagnostics)
+        - Flutter and Dart
+        - Git (C.O.R.G.I.)
+        - Terminal
+        - Files, tabs and panes
+        - O.W.L. board
+        - Search and navigation
+        - Debugging and running
+        - Sharing a workspace
+        - Remote SSH
+        - Plugins and Marketplace
+        - Themes and appearance
+        - Settings and keymaps
+        - Vim mode
+        - Previews (Markdown, HTML, images)
+        - Text input (IME, keyboard layouts)
+        - Install and updates
+        - Documentation
+        - Something else
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What would you like Lumide to do, and what would it help you with?
+      placeholder: When I review an agent's changes, I'd like to …
+    validations:
+      required: true
+
+  - type: textarea
+    id: elsewhere
+    attributes:
+      label: Seen it elsewhere?
+      description: Another editor that does it well (VS Code, IntelliJ, Zed, Vim, …), with a link or a screenshot.

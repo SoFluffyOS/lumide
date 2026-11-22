@@ -1,0 +1,96 @@
+name: 🐛 Bug report
+description: Something in Lumide doesn't work the way it should.
+title: "[BUG] "
+labels: ["bug", "needs triage"]
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this 🙏 Only **What happened?** is required: fill in the rest if you can, it helps.
+
+        Please [search the issues](https://github.com/SoFluffyOS/lumide/issues?q=is%3Aissue) first: someone may have hit it already. A security problem? Don't post it here: see [SECURITY.md](https://github.com/SoFluffyOS/lumide/blob/HEAD/SECURITY.md).
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead? A sentence or two is fine.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Where in Lumide does it happen?
+      options:
+        - Editor
+        - Agent Chat and agents
+        - AI completions (ghost text)
+        - Languages (LSP, completion, diagnostics)
+        - Flutter and Dart
+        - Git (C.O.R.G.I.)
+        - Terminal
+        - Files, tabs and panes
+        - O.W.L. board
+        - Search and navigation
+        - Debugging and running
+        - Sharing a workspace
+        - Remote SSH
+        - Plugins and Marketplace
+        - Themes and appearance
+        - Settings and keymaps
+        - Vim mode
+        - Previews (Markdown, HTML, images)
+        - Text input (IME, keyboard layouts)
+        - Install and updates
+        - Something else
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+        - Linux
+
+  - type: input
+    id: version
+    attributes:
+      label: Lumide version
+      description: The first line of the logs shows it (see Logs below), such as `macos Version 26.1 · Lumide 0.26.0`.
+      placeholder: "0.26.0"
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps that shows it. A tiny project or file helps a lot.
+      placeholder: |
+        1. Open a Flutter project
+        2. Open `lib/main.dart`
+        3. Press ⌘ + Shift + F
+        4. See …
+
+  - type: checkboxes
+    id: regression
+    attributes:
+      label: Regression
+      options:
+        - label: It worked in an earlier version of Lumide.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Run **Open Logs** from the Command Palette (or **Settings → Advanced → View Logs Dialog**), tick **Include metadata**, and copy them here. They help me fix it MUCH faster.
+      render: text
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or video
+      description: Drag images or a screen recording in here.

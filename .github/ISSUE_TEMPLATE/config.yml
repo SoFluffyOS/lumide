@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://docs.lumide.dev
+    about: How every feature works, with its shortcuts and settings.
+  - name: 💬 Questions and ideas
+    url: https://github.com/SoFluffyOS/lumide/discussions
+    about: Ask how to do something, or talk an idea through before filing it.
+  - name: 🎮 Discord
+    url: https://discord.gg/VP6p5JQdgt
+    about: Chat with the community.
+  - name: 🔐 Security problem
+    url: https://github.com/SoFluffyOS/lumide/blob/HEAD/SECURITY.md
+    about: Please report it privately, never in a public issue.
